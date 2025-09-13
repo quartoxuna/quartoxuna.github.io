@@ -5,7 +5,9 @@ layout: default
 <ul>
 {% for post in site.posts %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url }}"><strong>"{{ post.title }}"</strong></a><br />
+    <small>{{ post.date }} by {{ post.author }}</small><br />
+    <small><i>({{ post.tags }})</i></small>
   </li>
 {% endfor %}
 </ul>
