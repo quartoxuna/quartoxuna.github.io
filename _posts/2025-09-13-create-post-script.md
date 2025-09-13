@@ -10,7 +10,7 @@ The posts should be created in the `_drafts` folder first.
 
 As an argument, I simply want to specify the title of the new blog post.
 
-[_createPost.sh_](https://github.com/quartoxuna/quartoxuna.github.io/blob/main/createPost.sh)
+[_newPost.sh_](https://github.com/quartoxuna/quartoxuna.github.io/blob/main/newPost.sh)
 ```bash
 #!/bin/bash
 #
