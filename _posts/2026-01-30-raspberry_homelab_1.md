@@ -3,7 +3,7 @@ title: Raspberry Homelab - 1
 author: quartoxuna
 date: 2026-01-30
 layout: post
-tags: [raspberry, test, another]
+tags: [raspberry]
 categories: [homelab]
 ---
 
