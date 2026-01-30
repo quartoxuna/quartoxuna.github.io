@@ -19,8 +19,12 @@ echo "Creating new post skeleton '${FILEPATH}'..."
 
 cat << EOF > ${FILEPATH}
 ---
-layout: post
 title: ${TITLE}
+author: quartoxuna
+layout: post
+date `date +%Y-%m-%d`
+tags: []
+categories: []
 ---
 
 Hack the planet

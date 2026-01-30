@@ -1,8 +1,10 @@
 ---
-layout: post
 title: Bash script for fast post creation
 author: quartoxuna
-tags: bash
+layout: post
+date: 2025-09-13
+tags: [bash]
+categories: [misc]
 ---
 
 With this post I want to create a simple bash script, that creates a ready-to-go skeleton file for new blog posts.
