@@ -19,6 +19,6 @@ cat << EOF > ${FILEPATH}
 ---
 layout: tag
 tag: ${TAG_NAME}
-permalink: /tag/${TAG_NAME}
+permalink: /tag/${TAG_NAME}/
 ---
 EOF

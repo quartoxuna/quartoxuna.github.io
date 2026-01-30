@@ -1,5 +1,5 @@
 ---
 layout: tag
 tag: raspberry
-permalink: /tag/raspberry
+permalink: /tag/raspberry/
 ---
