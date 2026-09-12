@@ -14,8 +14,9 @@
 .resource-copy p,.resource-copy ul,.resource-copy ol,.resource-list{color:var(--muted)}
 .resource-copy h2:not(:first-child){margin-top:32px}
 .resource-copy ul,.resource-copy ol{padding-left:22px}.resource-copy li{margin:12px 0}
-.archive-note{margin-top:36px;padding:24px;border-left:2px solid var(--gold);background:var(--panel)}
-.archive-note p{margin-bottom:0}
+.archive-note{margin-top:36px;padding:24px;border-left:2px solid var(--gold);background:var(--panel);font-family:"Bonheur Royale",cursive;font-size:1.75rem;line-height:1.45}
+.archive-note strong{font-weight:400;color:var(--gold2)}
+.archive-note p{margin:12px 0 0}
 .download-panel{flex:0 0 300px;padding:28px;border:1px solid var(--line);background:var(--panel)}
 .download-panel .button{margin-top:20px}
 .resource-back{display:flex;align-items:center;justify-content:space-between;gap:32px}
