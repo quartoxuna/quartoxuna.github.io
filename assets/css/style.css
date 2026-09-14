@@ -43,3 +43,20 @@
 /* Homepage */
 .hero-home{min-height:calc(100vh - 75px);min-height:650px}.archive-status{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:11px 16px;border:1px solid rgba(199,169,107,.35);background:rgba(16,15,13,.55);color:var(--muted);font-size:.86rem}.status-mark{color:var(--gold);font-size:1rem}.intro-section{padding-top:95px;padding-bottom:95px}.intro-copy h2{font-family:Cinzel,Georgia,serif;font-size:clamp(1.9rem,3.5vw,3rem);line-height:1.15;margin:12px 0 25px}.intro-copy p{color:var(--muted);font-size:1.05rem}.coming-card{opacity:.9}.about-signoff{font-family:Cinzel,Georgia,serif;color:var(--gold2)!important;font-size:1.15rem!important;margin-top:40px}
 @media(max-width:800px){.hero-home{min-height:calc(100vh - 65px);min-height:600px}.archive-status{max-width:100%;align-items:flex-start}.nav{gap:0}.brand-logo-wrap,.brand-logo{width:40px;height:40px;flex-basis:40px}.brand-name{font-size:.78rem}}
+
+/* Shared monster statblocks */
+.monster-statblock{margin:40px 0;padding:28px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--gold);overflow-wrap:anywhere;line-height:1.6}
+.monster-statblock .monster-header h2{margin:10px 0;color:var(--gold2);font-size:2rem}
+.monster-statblock p{color:var(--paper);margin:12px 0}
+.monster-header p{color:var(--muted)}
+.monster-vitals{border-top:1px solid var(--line);padding:14px 0}
+.monster-vitals p{margin:3px 0}
+.monster-statblock strong{color:var(--gold2)}
+.monster-abilities{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:0;padding:16px 0;border-top:1px solid var(--line);text-align:center}
+.monster-abilities dt{color:var(--gold2);font-size:.8rem;font-weight:700}
+.monster-abilities dd{margin:4px 0 0;font-size:.9rem;font-variant-numeric:tabular-nums}
+.monster-statblock h3{font-family:Cinzel,Georgia,serif;color:var(--gold2);font-size:1.25rem;border-bottom:1px solid var(--line);padding-bottom:8px;margin:24px 0 12px}
+.monster-source{margin-top:24px;padding-top:12px;border-top:1px solid var(--line);font-size:.75rem}
+.monster-source p{color:var(--muted)}
+.monster-source a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:520px){.monster-statblock{padding:20px}.monster-abilities{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 8px}}
