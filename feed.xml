@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>The Weratrean Archive — Archive Records</title>
+  <subtitle>Explore The Weratrean Archive: system-agnostic tools, encounters, NPCs, locations, tables, and adventures created for Game Masters.</subtitle>
+  <id>https://weratrea.com/feed.xml</id>
+  <link href="https://weratrea.com/feed.xml" rel="self"/>
+  <link href="https://weratrea.com/"/>
+  <updated>2026-09-15T16:29:43+00:00</updated>
+  <author><name>The Archivist</name></author>
+
+</feed>

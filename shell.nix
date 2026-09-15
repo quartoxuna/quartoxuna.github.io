@@ -27,7 +27,7 @@ pkgs.mkShell {
       pkgs.zlib
     ]}:$PKG_CONFIG_PATH"
 
-    echo "The Dungeon Archivist — Jekyll development shell"
+    echo "The Weratrean Archive — Jekyll development shell"
     echo
     echo "First run:"
     echo "  bundle install"
