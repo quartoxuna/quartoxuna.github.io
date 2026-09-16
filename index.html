@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore The Weratrean Archive: system-agnostic tools, encounters, NPCs, locations, tables, and adventures created for Game Masters.">
-  <meta name="theme-color" content="#100f0d">
+  <meta name="theme-color" content="#0F1416">
   
   
   
@@ -42,42 +42,50 @@
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="/" aria-label="The Weratrean Archive home">
-      <span class="brand-logo-wrap">
-        <img class="brand-logo" src="/assets/images/weratrean-archive-emblem.png" alt="" aria-hidden="true">
-      </span>
-      <span class="brand-name">The Weratrean Archive</span>
+      <img class="brand-logo" src="/assets/images/archive-sigil.svg" alt="" width="38" height="46">
+      <span class="brand-name">The Weratrean<span>Archive</span></span>
     </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="/archive/">Archive</a>
-      <a href="/gm-tools/">GM Tools</a>
-      <a href="/archive/adventures/">Adventures</a>
-      <a href="/free/">Public Records</a>
-      <a href="/about/">About</a>
-    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
+    <div class="nav-panel" id="site-navigation">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/archive/">Archive</a>
+        <a href="/gm-tools/">GM Tools</a>
+        <a href="/archive/adventures/">Adventures</a>
+        <a href="/free/">Public Records</a>
+        <a href="/about/">About</a>
+      </nav>
+      <form class="nav-search" action="/archive/" role="search" hidden>
+        <label class="sr-only" for="nav-query">Search the Archive</label>
+        <input id="nav-query" name="q" type="search" placeholder="Search archive…" maxlength="160">
+        <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg></button>
+      </form>
+    </div>
   </div>
 </header>
 
-  <main><section class="hero hero-home">
-  <div class="hero-glow"></div>
+  <main id="main-content" tabindex="-1"><section class="hero hero-home">
+  <img class="hero-sigil" src="/assets/images/archive-sigil.svg" width="110" height="130" alt="" aria-hidden="true" />
   <div class="container hero-inner">
-    <div class="eyebrow">THE WERATREAN ARCHIVE</div>
-    <h1>Records from<br /><em>countless worlds.</em></h1>
+    <div class="eyebrow">RECORDS FROM COUNTLESS WORLDS</div>
+    <h1><span class="hero-the">The</span>Weratrean<br />Archive</h1>
     <p class="hero-copy">System-agnostic tools, encounters, characters, locations, tables, and adventures for Game Masters.</p>
     <div class="hero-actions">
-      <a class="button button-primary" href="/archive/">Browse the Archive →</a>
+      <a class="button button-primary" href="/archive/">Explore the Archive →</a>
     </div>
   </div>
 </section>
 
 <section class="section intro-section">
-  <div class="container narrow intro-copy">
+  <div class="container narrow intro-copy archive-parchment">
+    <span class="wax-seal" aria-hidden="true"><img src="/assets/images/archive-sigil-light.svg" width="32" height="38" alt="" /></span>
     <h2>Every world leaves something behind.</h2>
     <p>A tavern ledger. A map with no coast anyone recognises. A few pages rescued from the rain.</p>
     <p>Here you will find encounters, places, people, and useful things to bring to your own table. Take what you need. There is room in these records for your world, too.</p>
@@ -97,15 +105,90 @@
     <div class="product-grid">
       
       
+      <p class="collection-status">This collection is being prepared. No records are available here yet.</p>
+      
     </div>
   </div>
 </section>
+
+<section class="section"><div class="container">
+  <div class="section-heading"><div><div class="eyebrow">ARCHIVE CLASSIFICATION</div><h2>Find your way through the Archive.</h2></div></div>
+  
+<div class="free-grid category-grid">
+
+  
+  <a class="free-card category-card" href="/archive/adventures/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Adventures &amp; Expeditions</h3>
+    <p>Scenarios and expeditions for your next journey.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/characters/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Characters &amp; NPCs</h3>
+    <p>People worth meeting — or avoiding.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/creatures/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Creatures</h3>
+    <p>Beasts, monsters and stranger things.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/dungeons/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Dungeons &amp; Exploration</h3>
+    <p>Rooms, encounters, hazards and forgotten places.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/gm-aids/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Game Master’s Aids</h3>
+    <p>Tools for preparation, improvisation and running sessions.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/lore/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Lore, Rumours &amp; Secrets</h3>
+    <p>Whispers, legends and questionable truths.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/places/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Settlements &amp; Taverns</h3>
+    <p>Settlements, taverns, shops and other places worth visiting.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+  
+  <a class="free-card category-card" href="/archive/treasures/">
+    <svg class="category-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 6h9l2 3 2-3h9v20h-9l-2 2-2-2H5zM16 9v19M8 12h5M8 16h5M19 12h5M19 16h5" /></svg>
+    <h3>Treasures &amp; Artifacts</h3>
+    <p>Relics, curiosities and dangerous possessions.</p>
+    <span class="text-link">Explore this collection →</span>
+  </a>
+
+</div>
+
+</div></section>
 </main>
   <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">The Weratrean Archive</div>
+        <a class="footer-brand" href="/"><img src="/assets/images/archive-sigil.svg" alt="" width="27" height="32" loading="lazy"> The Weratrean Archive</a>
         <p class="footer-whisper">Not every record belongs to this world.</p>
       </div>
       <div class="footer-links">
@@ -116,5 +199,6 @@
   </div>
 </footer>
 
+  <script src="/assets/js/archive.js" defer></script>
 </body>
 </html>

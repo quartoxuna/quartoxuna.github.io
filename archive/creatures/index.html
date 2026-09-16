@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Beasts, monsters and stranger things.">
-  <meta name="theme-color" content="#100f0d">
+  <meta name="theme-color" content="#0F1416">
   
   
   
@@ -42,29 +42,36 @@
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="/" aria-label="The Weratrean Archive home">
-      <span class="brand-logo-wrap">
-        <img class="brand-logo" src="/assets/images/weratrean-archive-emblem.png" alt="" aria-hidden="true">
-      </span>
-      <span class="brand-name">The Weratrean Archive</span>
+      <img class="brand-logo" src="/assets/images/archive-sigil.svg" alt="" width="38" height="46">
+      <span class="brand-name">The Weratrean<span>Archive</span></span>
     </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="/archive/">Archive</a>
-      <a href="/gm-tools/">GM Tools</a>
-      <a href="/archive/adventures/">Adventures</a>
-      <a href="/free/">Public Records</a>
-      <a href="/about/">About</a>
-    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
+    <div class="nav-panel" id="site-navigation">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/archive/" aria-current="true">Archive</a>
+        <a href="/gm-tools/">GM Tools</a>
+        <a href="/archive/adventures/">Adventures</a>
+        <a href="/free/">Public Records</a>
+        <a href="/about/">About</a>
+      </nav>
+      <form class="nav-search" action="/archive/" role="search" hidden>
+        <label class="sr-only" for="nav-query">Search the Archive</label>
+        <input id="nav-query" name="q" type="search" placeholder="Search archive…" maxlength="160">
+        <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg></button>
+      </form>
+    </div>
   </div>
 </header>
 
-  <main><section class="page-hero"><div class="container">
+  <main id="main-content" tabindex="-1"><section class="page-hero"><div class="container">
   <div class="eyebrow">FROM THE ARCHIVE</div>
   <h1>Creatures</h1>
   <p>Beasts, monsters and stranger things.</p>
@@ -86,7 +93,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">The Weratrean Archive</div>
+        <a class="footer-brand" href="/"><img src="/assets/images/archive-sigil.svg" alt="" width="27" height="32" loading="lazy"> The Weratrean Archive</a>
         <p class="footer-whisper">Not every record belongs to this world.</p>
       </div>
       <div class="footer-links">
@@ -97,5 +104,6 @@
   </div>
 </footer>
 
+  <script src="/assets/js/archive.js" defer></script>
 </body>
 </html>
