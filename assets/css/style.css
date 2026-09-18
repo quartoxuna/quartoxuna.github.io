@@ -107,6 +107,9 @@ input::placeholder { color: var(--muted); opacity: 1; }
 .archive-whisper-offset { margin: 48px 0 0 auto; }
 /* A single card structure for featured and catalogue records. */
 .product-grid, .free-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+.archive-records > .archive-whisper { align-self: center; margin: 12px 0; }
+.archive-records.has-records > .archive-whisper { grid-column: 2; grid-row: 1; }
+.archive-records.has-records > .resource-entry:first-of-type { grid-column: 1; grid-row: 1; }
 .product-card, .free-card { min-width: 0; border: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; text-decoration: none; overflow-wrap: break-word; transition: border-color .2s, transform .2s; }
 .product-card:hover, .free-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .product-art { position: relative; min-height: 190px; overflow: hidden; display: grid; place-items: center; color: var(--gold); background: radial-gradient(ellipse at 55% 80%, var(--teal), var(--bg) 80%); border-bottom: 1px solid var(--line); }
@@ -239,6 +242,8 @@ input::placeholder { color: var(--muted); opacity: 1; }
   .hero-copy { font-size: 1.2rem; }
   .eyebrow, .free-number { font-size: .7rem; letter-spacing: .12em; }
   .product-grid, .free-grid, .category-grid { grid-template-columns: minmax(0,1fr); }
+  .archive-records.has-records > .archive-whisper,
+  .archive-records.has-records > .resource-entry:first-of-type { grid-column: auto; grid-row: auto; }
   .product-body, .free-card:not(.resource-entry) { padding: 24px; }
   .archive-parchment { padding: 28px 24px; }
   .wax-seal { display: none; }
