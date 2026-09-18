@@ -165,18 +165,18 @@ input::placeholder { color: var(--muted); opacity: 1; }
 .download-panel .button { margin-top: 14px; }
 .resource-back { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 /* Existing rules components keep a dark utility surface, including on parchment. */
-.monster-statblock { margin: 40px 0; padding: 28px; background: var(--panel); color: var(--paper); border: 1px solid var(--line); border-top: 2px solid var(--gold); overflow-wrap: anywhere; font: 1rem/1.6 var(--font-ui); }
-.monster-statblock .monster-header h2 { margin: 10px 0; color: var(--gold2); font-size: 2rem; }
-.resource-copy .monster-statblock p { color: var(--paper); margin: 12px 0; }
-.monster-statblock strong { color: var(--gold2); }
-.monster-vitals { border-top: 1px solid var(--line); padding: 14px 0; }
-.resource-copy .monster-vitals p { margin: 3px 0; }
-.monster-abilities { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 8px; margin: 0; padding: 16px 0; border-top: 1px solid var(--line); text-align: center; }
-.monster-abilities dt { color: var(--gold2); font-size: .8rem; font-weight: 600; }
-.monster-abilities dd { margin: 4px 0 0; font-size: .9rem; font-variant-numeric: tabular-nums; }
-.monster-statblock h3 { color: var(--gold2); font-size: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin: 24px 0 12px; }
-.monster-source { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .8rem; }
-.resource-copy .monster-source p, .resource-copy .monster-header p { color: var(--muted); }
+.statblock { margin: 40px 0; padding: 28px; background: var(--panel); color: var(--paper); border: 1px solid var(--line); border-top: 2px solid var(--gold); overflow-wrap: anywhere; font: 1rem/1.6 var(--font-ui); }
+.statblock .statblock-header h2 { margin: 10px 0; color: var(--gold2); font-size: 2rem; }
+.resource-copy .statblock p { color: var(--paper); margin: 12px 0; }
+.statblock strong { color: var(--gold2); }
+.statblock-vitals { border-top: 1px solid var(--line); padding: 14px 0; }
+.resource-copy .statblock-vitals p { margin: 3px 0; }
+.statblock-abilities { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 8px; margin: 0; padding: 16px 0; border-top: 1px solid var(--line); text-align: center; }
+.statblock-abilities dt { color: var(--gold2); font-size: .8rem; font-weight: 600; }
+.statblock-abilities dd { margin: 4px 0 0; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.statblock h3 { color: var(--gold2); font-size: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin: 24px 0 12px; }
+.statblock-source { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .8rem; }
+.resource-copy .statblock-source p, .resource-copy .statblock-header p { color: var(--muted); }
 /* Search filters: real form labels, native controls and live result count. */
 .archive-search { margin-bottom: 70px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
 .archive-search h2 { font-size: 1.6rem; }
@@ -242,8 +242,8 @@ input::placeholder { color: var(--muted); opacity: 1; }
   .product-body, .free-card:not(.resource-entry) { padding: 24px; }
   .archive-parchment { padding: 28px 24px; }
   .wax-seal { display: none; }
-  .monster-statblock { padding: 20px; }
-  .monster-abilities { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px 8px; }
+  .statblock { padding: 20px; }
+  .statblock-abilities { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px 8px; }
   .footer-grid { display: block; }
   .footer-links { margin-top: 24px; }
 }
@@ -254,4 +254,11 @@ input::placeholder { color: var(--muted); opacity: 1; }
 }
 /* Keep native hidden semantics stronger than card/form layout declarations. */
 [hidden] { display: none; }
-.resource-copy .monster-statblock a { color: var(--gold2); }
+.resource-copy .statblock a { color: var(--gold2); }
+
+/* Paired English PDF downloads. */
+.download-panel .button { display: block; margin-top: 0.75rem; text-align: center; }
+
+/* Keep the No. prefix and archive number inside decorative seals. */
+.resource-seal span { font-size: clamp(2.5rem, 5vw, 3.7rem); white-space: nowrap; }
+.art-number { font-size: 4.5rem; letter-spacing: .04em; white-space: nowrap; }
