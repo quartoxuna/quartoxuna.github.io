@@ -4,6 +4,7 @@ pkgs.mkShell {
   packages = with pkgs; [
     ruby
     bundler
+    python3
     git
 
     # Native dependencies used by some Ruby gems.
