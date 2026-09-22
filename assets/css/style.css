@@ -59,9 +59,10 @@ input::placeholder { color: var(--muted); opacity: 1; }
 .nav-search button { display: grid; place-items: center; width: 40px; flex-shrink: 0; border: 0; color: var(--gold2); background: transparent; }
 .menu-toggle { display: none; background: transparent; color: var(--paper); border: 1px solid var(--brass); padding: 9px 12px; font-size: .95rem; }
 .menu-toggle span { margin-left: 8px; }
-/* Keep the full banner at the right edge at every viewport size. */
-.hero { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; min-height: 660px; border-bottom: 1px solid var(--brass); background-color: var(--bg); background-image: linear-gradient(90deg, rgba(15,20,22,.96), rgba(15,20,22,.65) 45%, rgba(15,20,22,.08)), url('../images/web/weratea-banner.webp'); background-position: center, right center; background-size: 100% 100%, auto 100%; background-repeat: no-repeat; }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, var(--bg), transparent 35%); pointer-events: none; }
+/* Center the banner in the right half of the viewport. */
+.hero { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; min-height: 660px; border-bottom: 1px solid var(--brass); background-color: var(--bg); }
+.hero::before { content: ""; position: absolute; inset: 0 0 0 50%; z-index: -2; background: url('../images/web/weratea-banner.webp') center / auto 100% no-repeat; opacity: 1; transition: opacity .4s ease; pointer-events: none; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, var(--bg), transparent 35%), linear-gradient(90deg, rgba(15,20,22,.96), rgba(15,20,22,.65) 45%, rgba(15,20,22,.08)); pointer-events: none; }
 .hero-inner { position: relative; padding-block: 85px 100px; }
 .eyebrow, .free-number { font: 600 .75rem/1.5 var(--font-ui); letter-spacing: .16em; text-transform: uppercase; color: var(--gold2); }
 .hero h1 { font-size: clamp(2.9rem, 6.5vw, 5.65rem); line-height: 1.1; margin: 24px 0 28px; letter-spacing: -.02em; font-weight: 500; }
@@ -212,6 +213,7 @@ input::placeholder { color: var(--muted); opacity: 1; }
 @media (max-width: 800px) {
   .section { padding-block: 60px; }
   .hero { min-height: 600px; }
+  .hero::before { opacity: 0; }
   .hero-inner { padding-block: 72px; }
   .hero-copy { max-width: 450px; }
   .section-heading { display: block; }
@@ -237,7 +239,7 @@ input::placeholder { color: var(--muted); opacity: 1; }
   .nav { flex-basis: 100%; gap: 0 24px; }
   .nav a { min-height: 44px; }
   .nav-search { width: 100%; }
-  .hero { min-height: 550px; background-image: none; }
+  .hero { min-height: 550px; }
   .hero h1 { font-size: clamp(2.25rem, 9vw, 3rem); }
   .hero-copy { font-size: 1.2rem; }
   .eyebrow, .free-number { font-size: .7rem; letter-spacing: .12em; }
